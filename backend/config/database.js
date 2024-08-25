@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
-require("dotenv").config();//to feed .env into process but first install .env
+//to feed .env into process but first install .env
 const dbConnect=()=>{
-    mongoose.connect(process.env.DATABASE_URL,{
+    mongoose.connect("mongodb+srv://todo:todo1@merncluster.gssgs.mongodb.net/merndb?retryWrites=true&w=majority&appName=mernCluster",{
        
     })
     .then(()=>console.log("db connection is successful")
